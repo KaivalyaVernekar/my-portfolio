@@ -682,6 +682,40 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
+#success {
+  align-self: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+
+#success.success {
+  background-color: var(--first-color);
+  animation: status 4s ease-in-out forwards;
+}
+
+#success.error {
+  background-color: rgba(250, 0, 0, 0.8);
+  animation: status 4s ease-in-out forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;

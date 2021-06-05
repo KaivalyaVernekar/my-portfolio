@@ -123,3 +123,30 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+/*==================== Formspree removing default behavior of directing to their thankyou page ====================*/
+
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("success");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      status.classList.add("success");
+      status.innerHTML = "Thanks for connecting! will reach out to you shortly";
+      form.reset();
+    })
+    .catch((error) => {
+      status.classList.add("error");
+      status.innerHTML = "Oops! There was a problem";
+    });
+}
+form.addEventListener("submit", handleSubmit);

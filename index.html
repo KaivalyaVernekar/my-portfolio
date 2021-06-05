@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="image"
+      property="og:image"
+      content="[https://drive.google.com/file/d/1aijSfU31OHNiAMrR3Qp1d7n9WdcTKHKD/view?usp=sharing]"
+    />
 
     <!--==================== UNICONS ====================-->
     <link
@@ -48,7 +53,7 @@
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i> Contactme
+                <i class="uil uil-message nav__icon"></i> Contact me
               </a>
             </li>
           </ul>
@@ -133,8 +138,8 @@
               <h1 class="home__title">Hi, I'm Kaivalya</h1>
               <h3 class="home__subtitle">Frontend Developer</h3>
               <p class="home__description">
-                High level experience in web design and development knowledge,
-                producing quality work.
+                Experienced in designing and developing websites using
+                JavaScript and ReactJS.
               </p>
               <a href="#contact" class="button button--flex">
                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -174,7 +179,7 @@
             <div class="about__buttons">
               <a
                 download=""
-                href="assets/pdf/Alexa-Cv.pdf"
+                href="https://drive.google.com/file/d/1PjkyWIxZYQQ23IbOdwYMJZrHefYYjnJd/view?usp=sharing"
                 target="_blank"
                 class="button button--flex"
               >
@@ -375,11 +380,22 @@
             </div>
           </div>
 
-          <form action="" class="contact__form grid">
+          <form
+            action="https://formspree.io/f/xqkwqjjw"
+            method="POST"
+            class="contact__form grid"
+            id="my-form"
+          >
             <div class="contact__inputs grid">
               <div class="contact__content">
                 <label for="name" class="contact__label">Name</label>
-                <input type="text" id="name" class="contact__input" required />
+                <input
+                  type="text"
+                  id="name"
+                  class="contact__input"
+                  name="name"
+                  required
+                />
               </div>
 
               <div class="contact__content">
@@ -388,6 +404,7 @@
                   type="email"
                   id="email"
                   class="contact__input"
+                  name="email"
                   required
                 />
               </div>
@@ -395,7 +412,7 @@
               <div class="contact__content">
                 <label for="message" class="contact__label">Message</label>
                 <textarea
-                  name=""
+                  name="message"
                   id=""
                   cols="0"
                   rows="7"
@@ -408,10 +425,8 @@
                 <button type="submit" class="button button--flex">
                   Send Message <i class="uil uil-message button__icon"></i>
                 </button>
-                <!--<a href="#" class="button button--flex">
-                  Send Message
-                  <i class="uil uil-message button__icon"></i>
-                </a>-->
+
+                <div id="success"></div>
               </div>
             </div>
           </form>
@@ -436,7 +451,7 @@
               <a href="#portfolio" class="footer__link">Portfolio</a>
             </li>
             <li>
-              <a href="#contact" class="footer__link">Contactme</a>
+              <a href="#contact" class="footer__link">Contact me</a>
             </li>
           </ul>
 
