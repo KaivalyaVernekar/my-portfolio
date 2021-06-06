@@ -141,7 +141,8 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       status.classList.add("success");
-      status.innerHTML = "Thanks for connecting! will reach out to you shortly";
+      status.innerHTML =
+        "Thanks for connecting! I will reach out to you shortly";
       form.reset();
     })
     .catch((error) => {
